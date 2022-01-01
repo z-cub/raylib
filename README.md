@@ -16,6 +16,29 @@ Pascal bindings that allow you to use **raylib** and other useful libraries with
 ### Usage
 You simply add `raylib` to your uses section and everything will be linked in your executable, ready for use with no DLLs to maintain. You will have direct access to all the aforementioned libraries.
 
+```Pascal
+uses
+  System.SysUtils,
+  raylib;
+
+const
+  screenWidth = 800;
+  screenHeight = 450;
+
+begin
+  InitWindow(screenWidth, screenHeight, 'raylib [core] example - basic window');
+  while not WindowShouldClose do
+  begin
+    BeginDrawing;
+      ClearBackground(RAYWHITE);
+      DrawText('Congrats! You created your first window!', 190, 200, 20, LIGHTGRAY);
+    EndDrawing;
+  end;
+  CloseWindow;
+end.
+```
+
+
 ### Support
 - <a href="https://github.com/tinyBigGAMES/raylib/issues" target="_blank">Issues</a>
 - <a href="https://github.com/tinyBigGAMES/raylib/projects/1" target="_blank">Issue Tracking</a>
